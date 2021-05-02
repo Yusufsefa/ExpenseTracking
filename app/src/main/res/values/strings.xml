@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Expense Tracking</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="txt_first_screen">Karşınızda Harcama Takip Uygulaması</string>
+    <string name="txt_first_screen_continue">Artık karşılıklığa son</string>
+
+    <string name="txt_second_screen">Kolayca Kategorilendir</string>
+    <string name="txt_second_screen_continue">Harcamalarınız kategorileyerek daha kolay takip edin</string>
+
+    <string name="txt_third_screen">Farklı Para Birimleriyle Takip Et</string>
+
+
 </resources>
