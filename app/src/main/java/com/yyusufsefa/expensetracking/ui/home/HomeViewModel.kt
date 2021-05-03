@@ -1,4 +1,4 @@
-package com.yyusufsefa.expensetracking.ui
+package com.yyusufsefa.expensetracking.ui.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

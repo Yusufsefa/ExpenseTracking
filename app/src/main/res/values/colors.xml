@@ -9,4 +9,8 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="color_splash">#F7B733</color>
+    <color name="color_float_button">#F7B733</color>
+    <color name="color_hint">#F7B733</color>
+    <color name="color_button">#F7B733</color>
+
 </resources>

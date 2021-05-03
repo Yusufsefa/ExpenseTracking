@@ -1,4 +1,4 @@
-package com.yyusufsefa.expensetracking.ui
+package com.yyusufsefa.expensetracking.ui.home
 
 import com.yyusufsefa.expensetracking.R
 import com.yyusufsefa.expensetracking.common.BaseFragment

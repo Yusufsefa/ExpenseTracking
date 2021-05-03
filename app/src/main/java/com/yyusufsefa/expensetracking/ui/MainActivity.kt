@@ -1,7 +1,8 @@
-package com.yyusufsefa.expensetracking
+package com.yyusufsefa.expensetracking.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.yyusufsefa.expensetracking.R
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
