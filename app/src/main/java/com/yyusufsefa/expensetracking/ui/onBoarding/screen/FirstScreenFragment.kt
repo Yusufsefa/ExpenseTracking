@@ -2,10 +2,10 @@ package com.yyusufsefa.expensetracking.ui.onBoarding.screen
 
 import android.os.Bundle
 import android.view.View
-import androidx.viewpager2.widget.ViewPager2
 import com.yyusufsefa.expensetracking.R
 import com.yyusufsefa.expensetracking.common.BaseFragment
 import com.yyusufsefa.expensetracking.databinding.FragmentFirstScreenBinding
+import com.yyusufsefa.expensetracking.ui.onBoarding.ViewPagerFragment
 
 
 class FirstScreenFragment :
@@ -14,10 +14,10 @@ class FirstScreenFragment :
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager)
+        val viewPager = (requireParentFragment() as ViewPagerFragment).binding.viewPager
 
         binding.next.setOnClickListener {
-            viewPager?.currentItem = 1
+            viewPager.currentItem = 1
         }
     }
 }
