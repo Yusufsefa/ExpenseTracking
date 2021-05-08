@@ -82,23 +82,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
         }
     }
 
-    /**
-     * click bunu sp yazılcak, LiveShared Preferences şeklinde
-     * observe edilcek, DataStore
-     *
-     *
-     * ChipGroup yerine recycler view kullan,
-     * Model olarak ornek
-     * class -> text Turk Lirası,code CurrencyType.TRY
-     * setOnClickListener{item : ChipsModel -> {
-     *      listExpenseModel?.map { it.currencyType = item.currentcyType }
-    expenseAdapter.submitList(listExpenseModel)
-    expenseAdapter.notifyDataSetChanged()
-    viewModel.setCurrencyType(item.currencyType)
-    }
-     *
-     */
-
     private fun checkChipState() {
         binding.chipGroup.setOnCheckedChangeListener { _, checkId ->
             when (checkId) {

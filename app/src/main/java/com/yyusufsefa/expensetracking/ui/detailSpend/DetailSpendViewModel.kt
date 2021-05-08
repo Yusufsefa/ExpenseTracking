@@ -10,7 +10,6 @@ import javax.inject.Inject
 @HiltViewModel
 class DetailSpendViewModel @Inject constructor(private val repository: CurrencyRepository) :
     ViewModel() {
-
     fun deleteExpenseModel(id: Int) {
         viewModelScope.launch {
             repository.deleteExpenseModel(id)

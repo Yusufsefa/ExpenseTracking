@@ -14,9 +14,7 @@ import javax.inject.Inject
 class AddEditUserViewModel @Inject constructor(
     private val currencyRepository: CurrencyRepository,
     private val preferences: MyPreferences
-) :
-    ViewModel() {
-
+) : ViewModel() {
     val user: LiveData<User> = currencyRepository.fetchUser()
 
     val isLogin = preferences.isLogin()
@@ -24,12 +22,6 @@ class AddEditUserViewModel @Inject constructor(
     fun insertUser(user: User) {
         viewModelScope.launch {
             currencyRepository.insertUser(user)
-        }
-    }
-
-    fun deleteUser() {
-        viewModelScope.launch {
-            currencyRepository.deleteUser()
         }
     }
 
@@ -42,5 +34,4 @@ class AddEditUserViewModel @Inject constructor(
     fun setPrefLogin(isLogin: Boolean) {
         preferences.setLogined(isLogin)
     }
-
 }
