@@ -24,13 +24,13 @@ android {
     buildTypes {
         release {
             buildConfigField("String", "BASE_URL", '"https://free.currconv.com/"')
-            buildConfigField("String", "API_KEY", '"996bd93dd9cb2bad60c9"')
+            buildConfigField("String", "API_KEY", '"38863754835d95ccfdc3"')
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         debug {
             buildConfigField("String", "BASE_URL", '"https://free.currconv.com/"')
-            buildConfigField("String", "API_KEY", '"996bd93dd9cb2bad60c9"')
+            buildConfigField("String", "API_KEY", '"38863754835d95ccfdc3"')
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
