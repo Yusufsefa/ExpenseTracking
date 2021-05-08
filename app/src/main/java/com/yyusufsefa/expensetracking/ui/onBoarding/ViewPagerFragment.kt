@@ -11,21 +11,20 @@ import com.yyusufsefa.expensetracking.ui.onBoarding.screen.ThirdScreenFragment
 
 class ViewPagerFragment : BaseFragment<FragmentViewPagerBinding>(R.layout.fragment_view_pager) {
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        val fragmentList = arrayListOf(
+    private val fragmentList by lazy {
+        arrayListOf(
             FirstScreenFragment(),
             SecondScreenFragment(),
             ThirdScreenFragment()
         )
+    }
 
-        val adapter = ViewPagerAdapter(
-            fragmentList,
-            requireActivity().supportFragmentManager,
-            lifecycle
-        )
+    private val adapter by lazy {
+        ViewPagerAdapter(this)
+    }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         binding.viewPager.adapter = adapter
     }
 }
