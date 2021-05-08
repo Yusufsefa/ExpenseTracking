@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.addSpend.AddSpendFragment">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@string/add_spend_toolbar_text" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_add_name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/text_input_margin_start_60dp"
+            android:layout_marginLeft="@dimen/text_input_margin_left_60dp"
+            android:layout_marginTop="@dimen/text_input_margin_top_80dp"
+            android:backgroundTint="@color/color_hint"
+            android:hint="@string/text_input_desc"
+            app:hintTextColor="@color/color_hint"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            tools:targetApi="lollipop">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt_add_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_10dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_add_price"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/text_input_margin_start_60dp"
+            android:layout_marginLeft="@dimen/text_input_margin_left_60dp"
+            android:layout_marginTop="@dimen/radio_group_margin_top_40dp"
+            android:backgroundTint="@color/color_hint"
+            android:hint="@string/text_input_hint"
+            app:hintTextColor="@color/color_hint"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_input_add_name"
+            tools:targetApi="lollipop">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt_add_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_10dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RadioGroup
+            android:id="@+id/radio_group_expense_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/radio_group_margin_top_40dp"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="@+id/text_input_add_price"
+            app:layout_constraintTop_toBottomOf="@+id/text_input_add_price">
+
+            <RadioButton
+                android:id="@+id/radio_button_bill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/color_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/radio_button_bill" />
+
+            <RadioButton
+                android:id="@+id/radio_button_rent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/color_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/radio_button_rent" />
+
+            <RadioButton
+                android:id="@+id/radio_button_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/color_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/radio_button_other" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/radio_group_currency_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_20dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="@+id/radio_group_expense_type"
+            app:layout_constraintTop_toBottomOf="@+id/radio_group_expense_type">
+
+            <RadioButton
+                android:id="@+id/radio_button_TL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/color_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/radio_button_tl" />
+
+            <RadioButton
+                android:id="@+id/radio_button_USD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_8dp"
+                android:layout_marginLeft="@dimen/margin_left_8dp"
+                android:buttonTint="@color/color_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/radio_button_dolar" />
+
+            <RadioButton
+                android:id="@+id/radio_button_EUR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_8dp"
+                android:layout_marginLeft="@dimen/margin_left_8dp"
+                android:buttonTint="@color/color_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/radio_button_euro" />
+
+            <RadioButton
+                android:id="@+id/radio_button_GBP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_8dp"
+                android:layout_marginLeft="@dimen/margin_left_8dp"
+                android:buttonTint="@color/color_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/radio_button_sterlin" />
+        </RadioGroup>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_add"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_32dp"
+            android:layout_marginRight="@dimen/margin_right_32dp"
+            android:background="@drawable/orange_trading_button_selected"
+            android:text="@string/save_button"
+            android:textColor="@color/white"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radio_group_currency_type" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

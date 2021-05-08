@@ -14,7 +14,7 @@
         tools:context=".ui.home.HomeFragment">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/home_cardView"
+            android:id="@+id/home_user_cardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
@@ -68,7 +68,7 @@
                     android:id="@+id/txt_total_account"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Harcamanız"
+                    tools:text="Harcamanız"
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     app:layout_constraintRight_toRightOf="@id/txt_spend"
@@ -80,16 +80,15 @@
 
         <com.google.android.material.chip.ChipGroup
             android:id="@+id/chip_group"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="8dp"
+            android:layout_marginLeft="12dp"
             android:layout_marginTop="4dp"
-            android:layout_marginRight="8dp"
             android:orientation="horizontal"
             app:flow_horizontalAlign="center"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/home_cardView"
+            app:layout_constraintLeft_toLeftOf="@+id/home_user_cardView"
+            app:layout_constraintTop_toBottomOf="@+id/home_user_cardView"
             app:singleLine="true"
             app:singleSelection="true">
 
@@ -139,11 +138,9 @@
             android:layout_marginRight="8dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/chip_group"
-            app:layout_constraintVertical_bias="0.0"
             tools:listitem="@layout/item_expense" />
 
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton

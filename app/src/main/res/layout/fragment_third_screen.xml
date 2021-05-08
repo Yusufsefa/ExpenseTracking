@@ -13,16 +13,15 @@
         android:layout_height="match_parent"
         tools:context=".ui.onBoarding.screen.FirstScreenFragment">
 
-
-        <ImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/imageView"
             android:layout_width="300dp"
             android:layout_height="300dp"
             android:layout_marginTop="150dp"
-            android:src="@drawable/screen3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_screen3" />
 
         <TextView
             android:id="@+id/title"

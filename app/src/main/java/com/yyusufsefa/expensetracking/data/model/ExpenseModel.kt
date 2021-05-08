@@ -1,12 +1,20 @@
 package com.yyusufsefa.expensetracking.data.model
 
+import android.os.Parcelable
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
+@Entity(tableName = "expense_model")
 data class ExpenseModel(
-    val name: String? = null,
-    val type: ExpenseType? = null,
-    val price: Double? = 0.0,
-    val currencyType: CurrencyType? = null,
-    val usdPrice: Double = 0.0,
-    val tryPrice: Double = 0.0,
-    val gbpPrice: Double = 0.0,
-    val eurPrice: Double = 0.0
-)
+    @PrimaryKey(autoGenerate = true) val _id: Int = 0,
+    var name: String? = null,
+    var type: ExpenseType? = null,
+    var price: Double? = 0.0,
+    var currencyType: CurrencyType? = null,
+    var usdPrice: Double = 0.0,
+    var tryPrice: Double = 0.0,
+    var gbpPrice: Double = 0.0,
+    var eurPrice: Double = 0.0
+) : Parcelable

@@ -4,6 +4,7 @@ plugins {
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
     id 'org.jetbrains.kotlin.android.extensions'
+    id "androidx.navigation.safeargs.kotlin"
 }
 
 android {
@@ -23,13 +24,13 @@ android {
     buildTypes {
         release {
             buildConfigField("String", "BASE_URL", '"https://free.currconv.com/"')
-            buildConfigField("String", "API_KEY", '"4d08ab2969374459529f"')
+            buildConfigField("String", "API_KEY", '"996bd93dd9cb2bad60c9"')
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         debug {
             buildConfigField("String", "BASE_URL", '"https://free.currconv.com/"')
-            buildConfigField("String", "API_KEY", '"4d08ab2969374459529f"')
+            buildConfigField("String", "API_KEY", '"996bd93dd9cb2bad60c9"')
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
@@ -57,7 +58,13 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation "androidx.arch.core:core-testing:2.1.0"
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //Test
+    androidTestImplementation "androidx.test.ext:junit-ktx:$androidx_test_ext"
+    testImplementation "org.hamcrest:hamcrest:$hamcrestVersion"
+
 
     //Retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofit2_retrofit_version"
@@ -72,6 +79,7 @@ dependencies {
 
     //dagger hilt
     implementation "com.google.dagger:hilt-android:$hilt_version"
+    androidTestImplementation 'com.google.dagger:hilt-android-testing:2.35'
     kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
     implementation 'androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03'
     kapt 'androidx.hilt:hilt-compiler:1.0.0-alpha03'
@@ -83,6 +91,5 @@ dependencies {
     //navigation
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
-
 
 }

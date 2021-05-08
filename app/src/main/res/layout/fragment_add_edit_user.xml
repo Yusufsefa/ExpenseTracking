@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.addEditUser.AddEditUserFragment">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="@string/fragment_add_edit_txt_toolbar" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_edit_user"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/text_input_margin_start_60dp"
+            android:layout_marginLeft="@dimen/text_input_margin_start_60dp"
+            android:layout_marginTop="@dimen/text_input_margin_top_100dp"
+            android:backgroundTint="@color/color_hint"
+            android:hint="@string/add_edit_txt_add_name"
+            app:hintTextColor="@color/color_hint"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            tools:targetApi="lollipop">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt_edit_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/text_input_padding_10dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <RadioGroup
+            android:id="@+id/radio_group_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/radio_group_margin_top_40dp"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="@+id/text_input_edit_user"
+            app:layout_constraintTop_toBottomOf="@+id/text_input_edit_user">
+
+            <RadioButton
+                android:id="@+id/radio_button_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/color_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/radio_button_male" />
+
+            <RadioButton
+                android:id="@+id/radio_button_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/color_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/radio_button_female" />
+
+            <RadioButton
+                android:id="@+id/radio_button_idle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/color_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/radio_button_idle" />
+        </RadioGroup>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_save"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/button_margin_top_80dp"
+            android:layout_marginEnd="@dimen/button_margin_right_60dp"
+            android:layout_marginRight="@dimen/button_margin_right_60dp"
+            android:background="@drawable/orange_trading_button_selected"
+            android:text="@string/add_button_text"
+            android:textColor="@color/white"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radio_group_gender" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -11,5 +11,41 @@
 
     <string name="txt_third_screen">Farklı Para Birimleriyle Takip Et</string>
 
+    <string name="currency_TL">%.2f ₺</string>
+    <string name="currency_EUR">%.2f €</string>
+    <string name="currency_USD">%.2f $</string>
+    <string name="currency_GBP">%.2f £</string>
 
+    <string name="gender_male">%s Bey</string>
+    <string name="gender_female">%s Hanım</string>
+    <string name="gender_idle">%s</string>
+
+    <string name="add_desc_error_msg">Açıklama Alanı Boş Bırakılamaz!</string>
+    <string name="add_price_error_msg">Harcama Alanı Boş Bırakılamaz</string>
+    <string name="add_edit_name_error_msg">İsminizi Giriniz</string>
+
+    <string name="radio_button_expense_type_error">Harcama Tipi Boş Geçemez</string>
+    <string name="radio_button_currency_type_error">Para Birimi Boş Geçemez</string>
+    <string name="radio_button_gender_type_error">Lütfen Cinsiyetinizi Seçiniz</string>
+
+    <string name="connection_err_msg">Verileriniz localden alınmıştır güncel veri için lütfen internetinizi açınız</string>
+    <string name="fragment_add_edit_txt_toolbar">İsim Ekle / Değiştir</string>
+    <string name="add_edit_txt_add_name">İsminizi Giriniz</string>
+    <string name="radio_button_male">Erkek</string>
+    <string name="radio_button_female">Kadın</string>
+    <string name="radio_button_idle">Belirtmek İstemiyorum</string>
+    <string name="add_button_text">Kaydet</string>
+
+    <string name="add_spend_toolbar_text">Harcama Ekle</string>
+    <string name="text_input_desc">Açıklama</string>
+    <string name="text_input_hint">Harcama</string>
+    <string name="radio_button_bill">Fatura</string>
+    <string name="radio_button_rent">Kira</string>
+    <string name="radio_button_other">Diğer</string>
+    <string name="radio_button_tl">TL</string>
+    <string name="radio_button_dolar">Dolar</string>
+    <string name="radio_button_euro">Euro</string>
+    <string name="radio_button_sterlin">Sterlin</string>
+    <string name="save_button">EKLE</string>
+    <string name="remove_button">Sil</string>
 </resources>

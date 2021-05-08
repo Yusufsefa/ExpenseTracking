@@ -4,14 +4,14 @@ import com.yyusufsefa.expensetracking.util.Resource
 import retrofit2.Response
 
 open class BaseRepository {
-    protected suspend fun <T> getResult(call: suspend () -> Response<T>): Resource<T> {
+    protected suspend fun <T> getResult(call: suspend () -> Response<T?>): Resource<T?> {
 
         try {
             val response = call()
             if (response.isSuccessful) {
                 val body = response.body()
                 body?.let {
-                    return Resource.success(body)!!
+                    return Resource.success(body)
                 }
             }
             return error(response.message(), response.code())

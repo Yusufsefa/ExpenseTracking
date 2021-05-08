@@ -48,7 +48,7 @@ object RetrofitModule {
         .Builder()
         .client(client)
         .addConverterFactory(GsonConverterFactory.create())
-        .baseUrl("https://free.currconv.com/")
+        .baseUrl(BuildConfig.BASE_URL)
         .build()
 
     @Singleton
